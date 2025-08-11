@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comprovante | SistemaBC</title>
+
+    <link rel="icon" href="../../favicon.png">
+
+    <link rel="stylesheet" href="../../estilos/sistema.css">
+    <link rel="stylesheet" href="../../estilos/exportar.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+
+<body>
+    <header id="navdrawer">
+        <div class="sistema-logo">
+            <div class="logo"><img src="" id="logo"></div>
+            <div class="logo-div"></div>
+        </div>
+        <div class="sistema-navdrawer">
+            <div class="up-side">
+                <a class="navdrawer-option ativo" id="menu-home" data-path="" href="#">
+                    <span class="material-symbols-rounded">home</span>Painel Inicial
+                </a>
+
+                <a class="navdrawer-option" id="menu-consulta" data-path="consulta/" href="#">
+                    <span class="material-symbols-rounded">search</span>Consulta
+                </a>
+
+                <div class="navdrawer-div"></div>
+
+                <a class="navdrawer-option" id="menu-aprovacao" data-path="documentos/aprovacao/" href="#">
+                    <span class="material-symbols-rounded">priority</span>Aprovação
+                </a>
+
+                <a class="navdrawer-option" id="menu-contrato" data-path="documentos/contrato/" href="#">
+                    <span class="material-symbols-rounded">docs</span>Contrato de Crédito
+                </a>
+
+                <a class="navdrawer-option" id="menu-comprovante" data-path="documentos/comprovante/" href="#">
+                    <span class="material-symbols-rounded">receipt_long</span>Comprovante
+                </a>
+
+                <a class="navdrawer-option" id="menu-termo" data-path="documentos/termo/" href="#">
+                    <span class="material-symbols-rounded">two_pager</span>Termo de Responsabilidade
+                </a>
+
+                <a class="navdrawer-option" id="menu-declaracao" data-path="documentos/declaracao/" href="#">
+                    <span class="material-symbols-rounded">article</span>Declaração de Quitação
+                </a>
+
+                <a class="navdrawer-option" id="menu-ordem" data-path="documentos/ordem/" href="#">
+                    <span class="material-symbols-rounded">table</span>Ordem de Pagamento
+                </a>
+
+                <a class="navdrawer-option" id="menu-garantia" data-path="documentos/garantia/" href="#">
+                    <span class="material-symbols-rounded">inventory</span>Garantia de Liberação
+                </a>
+            </div>
+            <div class="down-side">
+                <div class="navdrawer-div"></div>
+
+                <a class="navdrawer-option" id="menu-ajuda" data-path="ajuda/" href="#">
+                    <span class="material-symbols-rounded">help</span>Ajuda
+                </a>
+
+                <a class="navdrawer-option" id="menu-configuracoes" data-path="configuracoes/" href="#">
+                    <span class="material-symbols-rounded">settings</span>Configurações
+                </a>
+
+                <a class="navdrawer-option" id="menu-sair" href="https://www.google.com">
+                    <span class="material-symbols-rounded">logout</span>Sair do Sistema
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="conteudo">
+        <header id="pagina">
+            <span id="sistema-banco">BANCO MASTER SA</span>
+            <span id="sistema-cnpj">33.923.798/0002-83</span>
+        </header>
+        <div class="sistema-pagina">
+            <h1>Comprovante</h1>
+            <div class="formularios">
+                <div class="area-boxes">
+                    <div class="box-duplo">
+                <div class="base-box">
+                    <h2>Dados do Cliente</h2>
+                    <div class="base-boxcampos">
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-cpfcnpj">CPF / CNPJ</label>
+                                <span class="material-symbols-rounded" title="Utilize somente números, pois o sistema irá pontuar automaticamente.">info</span>
+                            </div>
+                            <input class="input" id="i-cnpj" placeholder="000.000.000-00">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-razao">Nome / Razão Social</label>
+                            </div>
+                            <input class="input" id="i-razao" placeholder="Nome ou Razão Social">
+                        </div>
+                    </div>
+                </div>
+                <div class="base-box">
+                    <h2>Dados Bancários</h2>
+                    <div class="base-boxcampos">
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-banco">Instituição</label>
+                                <span class="material-symbols-rounded" title="Utilize, preferencialmente, o código numérico do banco e depois o nome, como mostrado no exemplo do campo.">info</span>
+                            </div>  
+                            <input class="input" id="i-banco" placeholder="Código - Nome do Banco" type="text">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-agencia">Agência</label>
+                            </div>
+                            <input class="input" id="i-agencia" placeholder="0000">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-conta">Conta</label>
+                            </div>
+                            <input class="input" id="i-conta" placeholder="000000-0">
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                
+                <div class="base-box">
+                    <h2>Documento</h2>
+                    <div class="base-boxcampos">
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-data">Data</label>
+                            </div>
+                            <input class="input" id="i-abertura" type="date" max="2025-12-31">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-hora">Hora</label>
+                            </div>
+                            <input class="input" id="i-hora" type="time">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-valor">Valor do Crédito</label>
+                                <span class="material-symbols-rounded" title="Utilize somente números e vírgulas.">info</span>
+                            </div>                            
+                            <input class="input" id="i-valor" placeholder="1000,00" type="number" step="10000" min="0">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="select-status">Status da Transferência</label>
+                            </div>                            
+                            <select id="select-status">
+				                <option value="[STATUS]" disabled="" selected="">Selecione uma opção</option>
+				                <option value="Efetuada">Efetuada</option>
+				                <option value="Concluída">Concluída</option>
+				                <option value="Não concluída">Não concluída</option>
+				                <option value="Erro na Operação">Erro na operação</option>
+				                <option value="Outro">Outro (editável)</option>
+			                </select>
+                            <input class="input" id="i-status" placeholder="Status da Transferência">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="select-pix">Chave PIX</label>
+                            </div>                            
+                            <select id="select-pix" required="">
+				                <option value="[CHAVE PIX]" disabled="" selected="">Selecione uma opção</option>
+				                <option value="Não utilizada">Não</option>
+				                <option value="Sim">Sim (editável)</option>
+			                </select>
+                            <input class="input" id="i-pix" placeholder="Chave PIX">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-inferior">
+                <div class="confirmacao">
+                    <label for="confirmacao" class="label-confirmacao">
+                        Todos os campos foram preenchidos?<input type="checkbox" id="confirmacao">
+                    </label>
+                </div>
+                
+                <button id="exportar">
+                    <span class="material-symbols-rounded">download</span>
+                    Exportar
+                </button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../scripts/navdrawer.js"></script>
+</body>
+
+</html>
