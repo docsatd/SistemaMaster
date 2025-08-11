@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   inputAbertura.addEventListener('input', () => {
-    const formatted = formatDateBR(inputAbertura.value);
-    displayAbertura.textContent = formatted;
+    const formattedDate = formatDateBR(inputAbertura.value);
+    displayAbertura.textContent = formattedDate;
   });
+
+  // Opcional: já atualiza ao carregar a página, caso haja valor
+  if (inputAbertura.value) {
+    displayAbertura.textContent = formatDateBR(inputAbertura.value);
+  }
 });
