@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="../../estilos/sistema.css">
     <link rel="stylesheet" href="../../estilos/exportar.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"/>
+
+    <link rel="stylesheet" href="../../estilos/icones.css/">
 </head>
 
-<body>
+<body id="comprovante">
     <div class="conteudo">
         <header id="pagina">
             <span id="sistema-banco" class="banco-razaosocial"></span>
@@ -34,7 +36,7 @@
                                 <label class="label-campo" for="i-cpfcnpj">CPF / CNPJ</label>
                                 <span class="material-symbols-rounded" title="Utilize somente números, pois o sistema irá pontuar automaticamente.">info</span>
                             </div>
-                            <input class="input" id="i-cnpj" placeholder="000.000.000-00">
+                            <input class="input" id="i-cpfcnpj" placeholder="000.000.000-00">
                         </div>
                         <div class="campo">
                             <div class="label">
@@ -77,7 +79,7 @@
                             <div class="label">
                                 <label class="label-campo" for="i-data">Data</label>
                             </div>
-                            <input class="input" id="i-abertura" type="date" max="2025-12-31">
+                            <input class="input" id="i-data" type="date" max="2025-12-31">
                         </div>
                         <div class="campo">
                             <div class="label">
@@ -136,6 +138,9 @@
         </div>
     </div>
     <script src="../../scripts/navdrawer.js"></script>
+    <script src="../../scripts/banco.js"></script>
+
+    <script src="./status.js"></script>
 </body>
 
 </html>
