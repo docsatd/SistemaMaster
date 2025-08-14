@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const chkPix = document.getElementById("i-chavepix");
+    const chkPix = document.getElementById("checkbox-chavepix");
     const h2Ativar = document.getElementById("h2-chavepix");
     const chavePixBox = document.getElementById("chavepix");
     const comprovanteConta = document.getElementById("comprovante-conta");

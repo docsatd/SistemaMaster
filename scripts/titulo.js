@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = "Contrato de Crédito [BANCO MASTER] - " + rs;
         });
     } else if (comprovante) {
-        document.getElementById('i-cnpj').addEventListener('input', function() {
+        document.getElementById('i-cpfcnpj').addEventListener('input', function() {
             var cnpj = this.value;
             document.title = "Comprovante - " + cnpj;
         });
@@ -42,11 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('i-cnpj').addEventListener('input', function() {
             var cnpj = this.value;
             document.title = "Banco MASTER - Aprovação [" + cnpj + "]";
-        });
-    } else if (telaComprovante) {
-        document.getElementById('i-cnpj').addEventListener('input', function() {
-            var cnpj = this.value;
-            document.title = "Banco MASTER - Comprovante [" + cnpj + "]";
         });
     }
 });

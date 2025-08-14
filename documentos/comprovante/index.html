@@ -114,14 +114,14 @@
                 <div class="base-box">
                     <div class="h2-ativar" id="h2-chavepix">
                         <h2>Chave PIX</h2>
-                        <input type="checkbox" id="i-chavepix">
+                        <input type="checkbox" id="checkbox-chavepix">
                     </div>
                     <div class="base-boxcampos" id="chavepix">
                         <div class="campo">
                             <div class="label" style="display: none;">
                                 <label class="label-campo" for="i-banco">PIX</label>
                             </div>
-                            <input class="input" id="i-pix" placeholder="Chave PIX" type="text">
+                            <input class="input" id="i-pix" placeholder="Digite aqui" type="text">
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                     <div class="comprovante-titulo">Dados do Recebedor</div>
                     <div class="comprovante-row">
                         <div class="comprovante-celulatitulo">Nome</div>
-                        <div class="comprovante-celula"><span id="nome"></span></div>
+                        <div class="comprovante-celula"><span id="nome" class="nowrap"></span></div>
                     </div>
                     <div class="comprovante-row">
                         <div class="comprovante-celulatitulo">CPF/CNPJ</div>
@@ -203,7 +203,7 @@
                     </div>
                     <div class="comprovante-row">
                         <div class="comprovante-celulatitulo">Instituição</div>
-                        <div class="comprovante-celula"><span id="banco"></span></div>
+                        <div class="comprovante-celula"><span id="banco" class="nowrap"></span></div>
                     </div>
                     <div class="comprovante-row">
                         <div class="comprovante-celulatitulo">Agência</div>
@@ -232,6 +232,7 @@
     <script src="./inputs.js"></script>
     <script src="./valor.js"></script>
 
+    <script src="../../scripts/titulo.js"></script>
     <script src="../../scripts/exportar.js"></script>
     <script src="../../scripts/impressao.js"></script>
 </body>

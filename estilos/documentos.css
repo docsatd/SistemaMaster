@@ -352,3 +352,127 @@ p.bold {
     
     box-sizing: border-box;
 }
+
+.ordem {
+    width: 792px;
+    height: 1120px;
+
+    background-image: url(../sistema/mda.svg);
+	background-size: cover;
+}
+
+.ordem-conteudo {
+    padding: 210px 80px 0px 80px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.ordem-secao {
+    display: flex;
+    flex-direction: column;
+}
+
+.ordem-row {
+    display: flex;
+    flex-direction: row;
+    
+    border-left: 1px solid var(--cor-destaque);
+    border-right: 1px solid var(--cor-destaque);
+    border-bottom: 1px solid var(--cor-destaque);
+}
+
+.ordem-row.final {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ordem-titulo {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 36px;
+    padding: 12px;
+
+    color: white;
+    font-family: 'Inter';
+	font-size: 15px;
+	font-weight: 500;
+
+    text-transform: uppercase;
+
+    background-color: var(--cor-destaque);
+
+    box-sizing: border-box;
+
+    z-index: 1;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ordem-celulatitulo {
+    display: flex;
+    align-items: center;
+
+    width: 25%;
+    height: 30px;
+    padding: 12px;
+
+    color: black;
+    font-family: 'Inter';
+	font-size: 12px;
+	font-weight: 600;
+
+    text-transform: uppercase;
+
+    border-right: 1px solid var(--cor-destaque);
+    
+    box-sizing: border-box;
+}
+
+.ordem-celula {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+
+    width: 75%;
+    height: 30px;
+    padding: 12px;
+
+    color: black;
+    font-family: 'Inter';
+	font-size: 12px;
+	font-weight: 500;
+    
+    box-sizing: border-box;
+}
+
+.ordem-celula.extra {
+    width: 25%;
+    border-right: 1px solid var(--cor-destaque);
+}
+
+.ordem-celula.semborda {
+    border-right: 0px;
+}
+
+.ordem-celula.full {
+    width: 100%;
+    height: min-content;
+}
+
+.ordem-celula.full p {
+    text-align: justify;
+    margin: 0px;
+}
+
+span.nowrap {
+    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse a largura */
+    white-space: nowrap; /* faz com que o texto não quebre para a próxima linha */
+    text-overflow: ellipsis; /* adiciona "..." para indicar que o texto foi truncado */
+}

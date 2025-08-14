@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         { class: 'banco-logradouro', texto: 'Rua Elvira Ferraz' },
         { class: 'banco-numero', texto: '440' },
-        { class: 'banco-bairro', texto: 'Vila Olimpia' },
+        { class: 'banco-bairro', texto: 'Vila Olímpia' },
         { class: 'banco-cidade', texto: 'São Paulo' },
         { class: 'banco-estado', texto: 'São Paulo' },
         { class: 'banco-uf', texto: 'SP' },
