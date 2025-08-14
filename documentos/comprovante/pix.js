@@ -1,29 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const selectPix = document.getElementById('select-pix');
-  const iPix = document.getElementById('i-pix');
-  const pix = document.getElementById('pix');
+document.addEventListener("DOMContentLoaded", function () {
+    const chkPix = document.getElementById("i-chavepix");
+    const h2Ativar = document.getElementById("h2-chavepix");
+    const chavePixBox = document.getElementById("chavepix");
+    const comprovanteConta = document.getElementById("comprovante-conta");
+    const comprovantePix = document.getElementById("comprovante-pix");
+    const inputPix = document.getElementById("i-pix");
+    const spanPix = document.getElementById("pix");
 
-  // Inicializa: input escondido e texto limpo ou padrão
-  iPix.style.display = 'none';
-  pix.textContent = '';
-
-  selectPix.addEventListener('change', () => {
-    if (selectPix.value === 'Sim') {
-      iPix.style.display = 'block';
-      iPix.value = '';
-      iPix.focus();
-      pix.textContent = '[CHAVE PIX]';
-    } else {
-      iPix.style.display = 'none';
-      pix.textContent = selectPix.value || '';
+    function atualizarPixTexto() {
+        const valor = inputPix.value.trim();
+        spanPix.textContent = valor ? valor : "[CHAVE PIX]";
     }
-  });
 
-  iPix.addEventListener('input', () => {
-    if (iPix.style.display !== 'none' && iPix.value.trim() !== '') {
-      pix.textContent = iPix.value;
-    } else {
-      pix.textContent = '[CHAVE PIX]';
+    function atualizarEstado() {
+        if (chkPix.checked) {
+            h2Ativar.classList.add("ativo");
+            chavePixBox.style.display = "flex";
+            comprovantePix.style.display = "flex";
+            comprovantePix.classList.add("final");
+            comprovanteConta.classList.remove("final");
+            atualizarPixTexto();
+        } else {
+            h2Ativar.classList.remove("ativo");
+            chavePixBox.style.display = "none";
+            comprovantePix.style.display = "none";
+            comprovantePix.classList.remove("final");
+            comprovanteConta.classList.add("final");
+        }
     }
-  });
+
+    inputPix.addEventListener("input", function () {
+        if (chkPix.checked) {
+            atualizarPixTexto();
+        }
+    });
+
+    chkPix.addEventListener("change", atualizarEstado);
+
+    chkPix.checked = false;
+    atualizarEstado();
 });

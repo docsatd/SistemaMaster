@@ -1,29 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     const selectStatus = document.getElementById('select-status');
-    const iStatus = document.getElementById('i-status');
-    const status = document.getElementById('status');
+    const inputStatus = document.getElementById('i-status');
+    const statusSpan = document.getElementById('status'); // assumindo que o span será criado
+     
+    // Configuração inicial
+    const firstOption = selectStatus.querySelector('option[value="[STATUS]"]');
+    if (firstOption) {
+        firstOption.disabled = true;
+        firstOption.selected = true;
+    }
+    inputStatus.style.display = 'none';
+    statusSpan.textContent = "[STATUS]";
 
-    // Inicializa: garante que iStatus está escondido e limpa status
-    iStatus.style.display = 'none';
-    status.textContent = '';
+    function updateStatusFromSelect() {
+        const selectedValue = selectStatus.value;
 
-    selectStatus.addEventListener('change', () => {
-        if (selectStatus.value === 'Outro') {
-            iStatus.style.display = 'block';
-            iStatus.value = '';
-            iStatus.focus();
-            status.textContent = '[OUTRO]';
-        } else {
-            iStatus.style.display = 'none';
-            status.textContent = selectStatus.value || '';
+        if (selectedValue === "[STATUS]") {
+            // Nenhuma seleção feita
+            statusSpan.textContent = "[STATUS]";
+            inputStatus.style.display = 'none';
+        } 
+        else if (selectedValue === 'Outro') {
+            // Mostrar input, mas usar [STATUS] se estiver vazio
+            inputStatus.style.display = 'flex';
+            statusSpan.textContent = inputStatus.value.trim() || "[STATUS]";
+        } 
+        else {
+            // Qualquer outra opção selecionada
+            inputStatus.style.display = 'none';
+            statusSpan.textContent = selectedValue;
         }
-    });
+    }
 
-    iStatus.addEventListener('input', () => {
-        if (iStatus.value.trim() !== '') {
-            status.textContent = iStatus.value;
-        } else {
-            status.textContent = '[OUTRO]';
-        }
-    });
+    function updateStatusFromInput() {
+        // Atualiza texto enquanto digita
+        statusSpan.textContent = inputStatus.value.trim() || "[STATUS]";
+    }
+
+    // Eventos
+    selectStatus.addEventListener('change', updateStatusFromSelect);
+    inputStatus.addEventListener('input', updateStatusFromInput);
 });

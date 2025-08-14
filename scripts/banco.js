@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         { class: 'banco-comprovante', texto: 'BANCO MASTER SA' },
         { class: 'banco-agencia', texto: '0001' },
-        { class: 'banco-conta', texto: '4192137-4' },
+        { class: 'banco-conta', texto: '41192137-4' },
 
         { class: 'banco-logradouro', texto: 'Rua Elvira Ferraz' },
         { class: 'banco-numero', texto: '440' },
