@@ -83,7 +83,7 @@ function ajustarLinks(basePath) {
 function ajustarLogo(basePath) {
   const logo = document.getElementById('logo');
   if (logo) {
-    logo.src = basePath + 'sistema/logo.png';
+    logo.src = basePath + 'sistema/logo.svg';
   }
 }
 
