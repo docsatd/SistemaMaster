@@ -29,36 +29,25 @@
             <div class="formularios">
                 <div class="area-boxes">
 
+                    <div class="box-duplo">
                 <div class="base-box">
-                    <h2>Documento</h2>
+                    <h2>Dados do Cliente</h2>
                     <div class="base-boxcampos">
                         <div class="campo">
                             <div class="label">
-                                <label class="label-campo" for="i-gerente">Gerente</label>
+                                <label class="label-campo" for="i-cnpj">CNPJ</label>
+                                <span class="material-symbols-rounded" title="Utilize somente números, pois o sistema irá pontuar automaticamente.">info</span>
                             </div>
-                            <input class="input" id="i-gerente" placeholder="Nome de Gerente" type="text">
+                            <input class="input" id="i-cnpj" placeholder="00.000.000/0000-00">
                         </div>
                         <div class="campo">
                             <div class="label">
-                                <label class="label-campo" for="i-data">Data de Emissão</label>
+                                <label class="label-campo" for="i-razao">Razão Social</label>
                             </div>
-                            <input class="input" id="i-data" type="date" max="2025-12-31">
-                        </div>
-                        <div class="campo">
-                            <div class="label">
-                                <label class="label-campo" for="i-tipopendencia">Tipo de Pendência</label>
-                            </div>
-                            <input class="input" id="i-tipopendencia" placeholder="Tipo de Pendência" type="text">
-                        </div>
-                        <div class="campo">
-                            <div class="label">
-                                <label class="label-campo" for="i-pendencia">Pendência</label>
-                            </div>
-                            <input class="input" id="i-pendencia" placeholder="Pendência" type="text">
+                            <input class="input" id="i-razao" placeholder="Nome da Empresa">
                         </div>
                     </div>
                 </div>
-
                 <div class="base-box">
                     <h2>Proposta de Crédito</h2>
                     <div class="base-boxcampos">
@@ -85,22 +74,34 @@
                         </div>
                     </div>
                 </div>
+                    </div>
 
                 <div class="base-box">
-                    <h2>Dados do Cliente</h2>
+                    <h2>Documento</h2>
                     <div class="base-boxcampos">
                         <div class="campo">
                             <div class="label">
-                                <label class="label-campo" for="i-cnpj">CNPJ</label>
-                                <span class="material-symbols-rounded" title="Utilize somente números, pois o sistema irá pontuar automaticamente.">info</span>
+                                <label class="label-campo" for="i-gerente">Gerente</label>
                             </div>
-                            <input class="input" id="i-cnpj" placeholder="00.000.000/0000-00">
+                            <input class="input" id="i-gerente" placeholder="Nome de Gerente" type="text">
                         </div>
                         <div class="campo">
                             <div class="label">
-                                <label class="label-campo" for="i-razao">Razão Social</label>
+                                <label class="label-campo" for="i-data">Data de Emissão</label>
                             </div>
-                            <input class="input" id="i-razao" placeholder="Nome da Empresa">
+                            <input class="input" id="i-data" type="date" max="2025-12-31">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-tipopendencia">Tipo de Pendência</label>
+                            </div>
+                            <input class="input" id="i-tipopendencia" placeholder="Tipo de Pendência" type="text">
+                        </div>
+                        <div class="campo">
+                            <div class="label">
+                                <label class="label-campo" for="i-pendencia">Pendência</label>
+                            </div>
+                            <input class="input" id="i-pendencia" placeholder="Pendência" type="text">
                         </div>
                     </div>
                 </div>
